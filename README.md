@@ -1,2 +1,2 @@
-# maakitak_blog
+# laravel9_blog
 リハビリ
