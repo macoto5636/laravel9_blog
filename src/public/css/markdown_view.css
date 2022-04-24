@@ -1,0 +1,62 @@
+#markdown_editor_textarea {
+    min-height: 500px;
+}
+
+.markdown_view h1 {
+    font-size: 28px;
+    padding: 5px 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.markdown_view h2 {
+    font-size: 20px;
+    padding: 5px 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.markdown_view h3 {
+    font-size: 16px;
+    padding: 5px 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.markdown_view p {
+    padding: 2px 15px;
+}
+
+.markdown_view li {
+    list-style: inside;
+    padding: 2px 15px;
+}
+
+.markdown_view li ul li {
+    list-style: inside;
+    list-style-type: circle;
+    padding: 2px 15px;
+}
+
+p code,
+li code,
+td code {
+    background-color: #f3f4f6;
+    padding: 2px 5px;
+}
+
+pre {
+    margin: 10px 0px;
+    padding: 10px !important;
+    white-space: pre-wrap !important;
+    background-color: #242E2F !important;
+    color: white !important;
+}
+
+code {
+    font-size: 14px;;
+}
