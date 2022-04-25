@@ -2268,20 +2268,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jQuery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jQuery__WEBPACK_IMPORTED_MODULE_0__);
 
 jQuery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  // 変数に要素を入れる
   var open = jQuery__WEBPACK_IMPORTED_MODULE_0___default()('.modal-open'),
       close = jQuery__WEBPACK_IMPORTED_MODULE_0___default()('.modal-close'),
-      container = jQuery__WEBPACK_IMPORTED_MODULE_0___default()('.modal-container'); //開くボタンをクリックしたらモーダルを表示する
-
+      container = jQuery__WEBPACK_IMPORTED_MODULE_0___default()('.modal-container');
   open.on('click', function () {
     container.addClass('active');
     return false;
-  }); //閉じるボタンをクリックしたらモーダルを閉じる
-
+  });
   close.on('click', function () {
     container.removeClass('active');
-  }); //モーダルの外側をクリックしたらモーダルを閉じる
-
+  });
   jQuery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
     if (!jQuery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.modal-body').length) {
       container.removeClass('active');

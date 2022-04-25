@@ -21,7 +21,7 @@
                 </label>
                 <div class="flex items-center border-b border-gray-200 py-2">
                     <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="右側の編集ボタンからタグを選択" aria-label="Full name" readonly>
-                    <button class="flex-shrink-0 bg-sky-300 hover:bg-sky-500 border-sky-300 hover:border-sky-500 text-sm border-4 text-white py-1 px-2 rounded" type="button" data-modal-toggle="large-modal">
+                    <button class="modal-open flex-shrink-0 bg-sky-300 hover:bg-sky-500 border-sky-300 hover:border-sky-500 text-sm border-4 text-white py-1 px-2 rounded" type="button">
                         　編集　
                     </button>
                 </div>
@@ -51,8 +51,8 @@
         </div>
     </div>
 </div>
-<div id="large-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-    <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
+<div id="large-modal" tabindex="-1" class="modal-container hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+    <div class="modal-body relative p-4 w-full max-w-4xl h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <!-- Modal header -->
@@ -60,12 +60,12 @@
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">
                     タグ編集
                 </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="large-modal">
+                <button type="button" class="modal-close text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="large-modal">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="p-6 space-y-6">
+            <div class="modal-content p-6 space-y-6">
                 <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
                 </p>
@@ -79,6 +79,50 @@
                 <button data-modal-toggle="large-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
             </div>
         </div>
+    </div>
+</div>
+<div class="modal-container">
+    <div class="modal-body">
+        <div class="modal-close">×</div>
+        <div class="modal-content rounded-lg">
+            <h3 class="text-xl font-medium text-gray-900">
+                タグ編集
+            </h3>
+            <hr class="my-5">
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full mx-5 px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                        既存のタグ
+                    </label>
+                    <div class="flex items-center py-2">
+                        <select class="w-full block px-3 py-2 border-gray-300 bg-white border text-gray-700 rounded">
+                            <option>Laravel</option>
+                            <option>TailwindCSS</option>
+                            <option>React.js</option>
+                        </select>
+                        <button class="ml-3 flex-shrink-0 bg-sky-300 hover:bg-sky-500 border-sky-300 hover:border-sky-500 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                            　追加　
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-10 my-5">
+                <hr>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                        新規のタグ
+                    </label>
+                    <div class="flex items-center border-b border-gray-200 py-2">
+                        <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="新規のタグ名を入力" >
+                        <button class="flex-shrink-0 bg-sky-300 hover:bg-sky-500 border-sky-300 hover:border-sky-500 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                            　追加　
+                        </button>
+                    </div>
+                </div>
+            </div>
+      </div>
     </div>
 </div>
 @endsection

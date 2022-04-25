@@ -42,11 +42,20 @@
     padding: 2px 15px;
 }
 
+.markdown_view a {
+    color: #0ea5e9;
+}
+
+.markdown_view a:hover{
+    text-decoration: underline;
+}
+
 p code,
 li code,
 td code {
     background-color: #f3f4f6;
-    padding: 2px 5px;
+    padding: 3px 5px;
+    font-size: 14px;
 }
 
 pre {
@@ -55,6 +64,7 @@ pre {
     white-space: pre-wrap !important;
     background-color: #242E2F !important;
     color: white !important;
+    border-radius: 10px;
 }
 
 code {
